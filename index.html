@@ -1,17 +1,46 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
-        <style>
-           .center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                height:500px;
-            } 
-        </style>
     </head>
     <body>
         <h1> Play Connect 4! </h1>
-        <img src="C4Board.png" alt="Connect 4 Board" class="center">
+        <div>
+            <span class="yellowpiece" id="yellow1" style="visibility:hidden"></span>
+            <span class="yellowpiece" id="yellow2" style="visibility:hidden"></span>
+            <span class="yellowpiece" id="yellow3" style="visibility:hidden"></span>
+            <span class="yellowpiece" id="yellow4" style="visibility:hidden"></span>
+            <span class="yellowpiece" id="yellow5" style="visibility:hidden"></span>
+            <span class="yellowpiece" id="yellow6" style="visibility:hidden"></span>
+            <span class="yellowpiece" id="yellow7" style="visibility:hidden"></span>
+        </div>
+        <img src="C4Board.png" alt="Connect 4 Board" class="center" usemap="#colmap">
+        <map name="colmap">
+            <area shape="rect" coords="0,0,100,600" alt="Column 1" onmouseover=showElement(yellow1) href=https://www.w3schools.com/html/html_images_imagemap.asp>
+            <area shape="rect" coords="100,0,200,600" alt="Column 2" href=https://www.w3schools.com/html/html_images_imagemap.asp>
+            <area shape="rect" coords="200,0,300,600" alt="Column 3" href=https://www.w3schools.com/html/html_images_imagemap.asp>
+            <area shape="rect" coords="300,0,400,600" alt="Column 4" href=https://www.w3schools.com/html/html_images_imagemap.asp>
+            <area shape="rect" coords="400,0,500,600" alt="Column 5" href=https://www.w3schools.com/html/html_images_imagemap.asp>
+            <area shape="rect" coords="500,0,600,600" alt="Column 6" href=https://www.w3schools.com/html/html_images_imagemap.asp>
+            <area shape="rect" coords="600,0,700,600" alt="Column 7" href=https://www.w3schools.com/html/html_images_imagemap.asp>
+        </map>
+
+        <script type=text/javascript>
+            function showElement(id) {
+                var element = document.getElementById(id);
+                element.style.visibility = visible;
+            }
+            function hideElement(id) {
+                var element = document.getElementById(id);
+                element.style.visibility = hidden;
+            }
+            
+            function mouseOver(id) {
+              document.getElementById(id).style.visibility = "red";
+            }
+            
+            function mouseOut() {
+              document.getElementById("demo").style.color = "black";
+            }
+            </script>
     </body>
 </html>
